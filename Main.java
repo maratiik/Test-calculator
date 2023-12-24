@@ -15,7 +15,7 @@ public class Main {
     }
 
 
-    public static boolean isNumeric(String str1, String str2) {
+    public static boolean isNumeric(String str1, String str2) throws IllegalArgumentException {
 
         boolean s1 = false;
         boolean s2 = false;
@@ -50,7 +50,7 @@ public class Main {
     }
 
 
-    public static void isValidRoman(String str1, String str2) {
+    public static void isValidRoman(String str1, String str2) throws IllegalArgumentException {
 
         if (str1.contains("+") || str1.contains("-") || str1.contains("*") || str1.contains("/")) {
             throw new IllegalArgumentException("Cannot work with 3 or more numbers.");
@@ -64,7 +64,7 @@ public class Main {
     }
 
 
-    public static boolean isInteger(Double a, Double b) {
+    public static boolean isInteger(Double a, Double b) throws IllegalArgumentException {
 
         if ((a % 1) == 0 && (b % 1) == 0) {
             return true;
@@ -74,7 +74,7 @@ public class Main {
     }
 
 
-    public static String calc(String input) {
+    public static String calc(String input) throws IllegalArgumentException {
 
         char operator = ' ';
         int operatorIndex = -1;
@@ -104,7 +104,7 @@ public class Main {
     }
 
 
-    public static String calcNumeric(String a, String b, char operator) {
+    public static String calcNumeric(String a, String b, char operator) throws IllegalArgumentException {
 
         Double num1 = Double.parseDouble(a);
         Double num2 = Double.parseDouble(b);
@@ -141,7 +141,7 @@ public class Main {
     }
 
 
-    public static String calcRoman(String str1, String str2, char operator) {
+    public static String calcRoman(String str1, String str2, char operator) throws IllegalArgumentException {
 
         Map<Character, Integer> m = new HashMap<>();
         Double num1 = 0.0;
